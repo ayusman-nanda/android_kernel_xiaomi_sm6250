@@ -1,0 +1,5 @@
+export ARCH=arm64
+export CROSS_COMPILE=aarch64-linux-gnu-
+
+make O=out ARCH=arm64  vendor/xiaomi/miatoll_defconfig
+make O=out ARCH=arm64 DTC_EXT="$(command -v dtc)"  -j$(nproc)
